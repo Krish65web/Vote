@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Vote for Your Idol</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ </head> 
+ <body> 
+  <header> 
+   <h1>Vote for Your Favorite Idol</h1> 
+  </header> 
+  <div class="container"> 
+   <div class="idol" id="idol1" onclick="vote('idol1')"> 
+    <h2>MS Dhoni</h2> 
+    <p>Total Votes: <span id="idol1-votes">0</span></p> 
+   </div> 
+   <div class="idol" id="idol2" onclick="vote('idol2')"> 
+    <h2>Ronaldo</h2> 
+    <p>Total Votes: <span id="idol2-votes">0</span></p> 
+   </div> 
+   <div class="idol" id="idol3" onclick="vote('idol3')"> 
+    <h2>Messi</h2> 
+    <p>Total Votes: <span id="idol3-votes">0</span></p> 
+   </div> 
+   <div class="idol" id="idol4" onclick="vote('idol4')"> 
+    <h2>Virat Kohli</h2> 
+    <p>Total Votes: <span id="idol4-votes">0</span></p> 
+   </div> 
+  </div> <!-- Modal Popup --> 
+  <div id="voteModal" class="modal"> 
+   <div class="modal-content"> <span class="close-btn" onclick="closeModal()">×</span> 
+    <h2>Thank You for Voting!</h2> 
+    <p id="modal-message"></p> 
+    <div class="share-message"> 
+     <p>Share your vote:</p> <a id="share-whatsapp" href="#" target="_blank">Share on WhatsApp</a> <a id="share-instagram" href="#" target="_blank">Share on Instagram</a> 
+    </div> 
+   </div> 
+  </div> 
+  <script src="scripts.js"></script> 
+ 
+</body></html>

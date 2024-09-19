@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Vote for Your Idol</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.idol {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.idol:hover {
+    background-color: #f0f0f0;
+}
+
+.vote-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vote-button:disabled {
+    background-color: #ccc;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.share-message {
+    margin-top: 20px;
+}
+
+.share-message a {
+    display: block;
+    margin: 5px 0;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#share-whatsapp {
+    background-color: #25D366;
+}
+
+#share-instagram {
+    background-color: #C13584;
+}
+</style></head> 
+ <body> 
+  <header> 
+   <h1>Vote for Your Favorite Idol</h1> 
+  </header> 
+  <div class="container"> 
+   <div class="idol" id="idol1" onclick="vote('idol1')"> 
+    <h2>MS Dhoni</h2> 
+    <p>Total Votes: <span id="idol1-votes">0</span></p> 
+   </div> 
+   <div class="idol" id="idol2" onclick="vote('idol2')"> 
+    <h2>Ronaldo</h2> 
+    <p>Total Votes: <span id="idol2-votes">0</span></p> 
+   </div> 
+   <div class="idol" id="idol3" onclick="vote('idol3')"> 
+    <h2>Messi</h2> 
+    <p>Total Votes: <span id="idol3-votes">0</span></p> 
+   </div> 
+   <div class="idol" id="idol4" onclick="vote('idol4')"> 
+    <h2>Virat Kohli</h2> 
+    <p>Total Votes: <span id="idol4-votes">0</span></p> 
+   </div> 
+  </div> <!-- Modal Popup --> 
+  <div id="voteModal" class="modal"> 
+   <div class="modal-content"> <span class="close-btn" onclick="closeModal()">×</span> 
+    <h2>Thank You for Voting!</h2> 
+    <p id="modal-message"></p> 
+    <div class="share-message"> 
+     <p>Share your vote:</p> <a id="share-whatsapp" href="#" target="_blank">Share on WhatsApp</a> <a id="share-instagram" href="#" target="_blank">Share on Instagram</a> 
+    </div> 
+   </div> 
+  </div> 
+  <script src="scripts.js"></script> 
+ 
+</body></html>
